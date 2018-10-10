@@ -1,0 +1,61 @@
+{
+  "name": "thaipost",
+  "description": "CLI for tracking Thailand Post",
+  "version": "1.0.0",
+  "author": "Kamontat Chantrachirathumrong @kamontat",
+  "bin": {
+    "thaipost": "./bin/run"
+  },
+  "bugs": "https://github.com/kamontat/thaipost/issues",
+  "dependencies": {
+    "@oclif/command": "1",
+    "@oclif/config": "1",
+    "@oclif/plugin-help": "2",
+    "chalk": "2.4.1",
+    "commander": "2.19.0",
+    "express": "4.16.3",
+    "moment": "2.22.2",
+    "pkg": "4.3.1",
+    "puppeteer": "1.9.0",
+    "tslib": "1"
+  },
+  "devDependencies": {
+    "@oclif/test": "1",
+    "@oclif/tslint": "3",
+    "@types/chai": "4",
+    "@types/express": "4.16.0",
+    "@types/mocha": "5",
+    "@types/node": "10",
+    "@types/puppeteer": "1.9.0",
+    "chai": "4",
+    "mocha": "5",
+    "nyc": "13",
+    "ts-node": "7",
+    "tslint": "5",
+    "typescript": "3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": ["/bin", "/dist"],
+  "homepage": "https://github.com/kamontat/thaipost",
+  "keywords": ["oclif"],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "oclif": {
+    "bin": "thaiport"
+  },
+  "repository": "kamontat/thaipost",
+  "scripts": {
+    "start:server": "yarn prepack && dist/server/index.js",
+    "start:cli": "yarn prepack && ./bin/run",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rm -rf dist && tsc -b",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
+  },
+  "types": "dist/index.d.ts",
+  "pkg": {
+    "scripts": ["dist/**/*.js"],
+    "assets": ["node_modules/puppeteer/**/*"]
+  }
+}
