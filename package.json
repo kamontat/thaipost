@@ -42,9 +42,6 @@
   "keywords": ["oclif"],
   "license": "MIT",
   "main": "dist/index.js",
-  "oclif": {
-    "bin": "thaiport"
-  },
   "repository": "kamontat/thaipost",
   "scripts": {
     "start:server": "yarn prepack && dist/server/index.js",
@@ -56,5 +53,11 @@
   "pkg": {
     "scripts": ["dist/**/*.js"],
     "assets": ["node_modules/puppeteer/**/*"]
+  },
+  "oclif": {
+    "macos": {
+      "identifier": "com.kamontat.thaipost"
+    },
+    "bin": "thaiport"
   }
 }
