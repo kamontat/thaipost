@@ -49,7 +49,6 @@
   "scripts": {
     "start:server": "yarn prepack && dist/server/index.js",
     "start:cli": "yarn prepack && ./bin/run",
-    "posttest": "tslint -p test -t stylish",
     "prepack": "rm -rf dist && tsc -b",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
   },

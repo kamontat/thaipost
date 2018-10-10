@@ -1,19 +1,13 @@
-import { expect, test } from "@oclif/test";
+// import { expect, test } from "@oclif/test";
 
-import cmd = require("../src/cli/index");
+// import cmd = require("../src/cli/index");
 
 describe("thaipost", () => {
-  test
-    .stdout()
-    .do(() => cmd.run([]))
-    .it("runs hello", ctx => {
-      expect(ctx.stdout).to.contain("hello world");
-    });
-
-  test
-    .stdout()
-    .do(() => cmd.run(["--name", "jeff"]))
-    .it("runs hello --name jeff", ctx => {
-      expect(ctx.stdout).to.contain("hello jeff");
-    });
+  // test
+  //   .stdout()
+  //   .do(() => cmd.run(["ID"]))
+  //   .it("runs error ID", ctx => {
+  //     expect(ctx.error).not.undefined("");
+  //     expect(ctx.error.message).not.undefined("");
+  //   });
 });
