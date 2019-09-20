@@ -1,6 +1,6 @@
-# thaipost
+# thaipost (DEPRECATED)
 
-Unoffical Node REST APIs for Thailand Post
+DEPRECATED: Unoffical Node REST APIs for Thailand Post
 
 ## TOC
 
